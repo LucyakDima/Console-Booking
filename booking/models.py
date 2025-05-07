@@ -34,7 +34,7 @@ class GamingRoom(models.Model):
     capacity = models.IntegerField(default=1)#кількість можливих гравців на сеансі
     price_per_hour = models.IntegerField()#ціна за годину
     city = models.ForeignKey(City, on_delete=models.CASCADE)
-    consoles = models.ManyToManyField(GamingConsole, related_name='rooms')#консолі, доступні в кімнаті
+    # consoles = models.ManyToManyField(GamingConsole, related_name='rooms')#консолі, доступні в кімнаті
     def __str__(self):
         return f"Room #{self.number} - Capacity: {self.capacity}"
     class Meta:
